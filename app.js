@@ -8,6 +8,7 @@ hamburger.addEventListener('click', function(){
     this.classList.toggle('close');
     nav.classList.toggle('reveal-nav');
     menu.classList.toggle('reveal-items');
+    body.classList.toggle('lockscroll')
 })
 
   links.forEach(item => {
@@ -15,6 +16,7 @@ hamburger.addEventListener('click', function(){
     hamburger.classList.toggle('close');
     nav.classList.toggle('reveal-nav');
     menu.classList.toggle('reveal-items');
+    body.classList.toggle('lockscroll')
     })
   })
 
