@@ -16,6 +16,7 @@
     * {
       box-sizing: border-box;
     }
+
     body {
       margin: 0;
       font-family: Helvetica;
@@ -70,7 +71,7 @@
       width: 100%;
       max-width: 1000px;
       padding-left: 30px;
-      padding-right:30px;
+      padding-right: 30px;
     }
 
     #mailing-list-landing-page {
@@ -123,45 +124,46 @@
         margin-right: 30px;
         margin-top: 0px !important;
       }
- 
+
+    }
+
+    @media only screen and (max-width: 420px) {
+      .logo-landing-page {
+        margin-top: 10px !important;
+        max-width: 400px;
+      }
+    }
+
+    @media only screen and (max-height: 460px) {
+      .logo-landing-page {
+        max-width: 350px;
+        margin-top: 0px;
       }
 
-      @media only screen and (max-width: 420px) {
-        .logo-landing-page {
-          margin-top: 10px !important;
-          max-width: 400px;
-        }
+      #entersite {
+        transform: scale(0.7);
+        transform-origin: top;
+        top: 75%;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+
+      .logo-landing-page {
+        margin-top: 0px;
+        width: 100%;
+        max-width: 500px;
       }
 
-        @media only screen and (max-height: 460px) {
-          .logo-landing-page {
-            max-width: 350px;
-            margin-top: 0px;
-          }
-
-          #entersite {
-            transform: scale(0.7);
-            transform-origin: top;
-            top:75%;
-          }
-        }
-
-          @media only screen and (max-width: 768px) {
-
-            .logo-landing-page {
-              margin-top: 0px;
-              width: 100%;
-              max-width: 500px;
-            }
-
-            #myVideo {
-              width: auto;
-              height: 100vh;
-              object-fit: cover;
-            }
-          }
+      #myVideo {
+        width: auto;
+        height: 100vh;
+        object-fit: cover;
+      }
+    }
   </style>
 </head>
+
 <body>
 
   <video playsinline autoplay muted id="myVideo" poster="/landing-page-poster-image.png">
@@ -184,7 +186,6 @@
 
     let source = document.createElement("source")
     source.setAttribute("type", "video/mp4")
-
     if (windowWidth < 518 && windowHeight > 375) {
       //It is a small screen
       source.setAttribute("src", 'ANDRO test.mp4')
