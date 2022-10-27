@@ -65,8 +65,8 @@
     <img class="andro-logo" src="/ANDRO_WHITE.png" alt="Andro logo">
   </a>
   <div class="landing-video" id="home">
-    <video playsinline autoplay muted loop id="mobile-video" poster="/mobile vid poster.png">
-      <source src="/home-page-vid-mobile.mp4" type="video/mp4">
+    <video playsinline autoplay muted loop id="mobile-video" poster="/homepage-mobile-poster.png">
+      <source src="/ANDRO compressed.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
     <video playsinline autoplay muted loop id="smaller-video" poster="/homepage poster.png">
@@ -382,19 +382,21 @@
       if (!video2.muted) {
         icon.style.opacity = "0.7";
         video2.muted = true;
-        video3.muted = true;
-        icon2.style.opacity = "0"
-      }
-      else if (!video3.muted) {
-        icon.style.opacity = "0.7";
-        video2.muted = true;
-        video3.muted = true;
         icon2.style.opacity = "0"
       }
       else {
         icon.style.opacity = "0";
         icon2.style.opacity = "0.7"
         video2.muted = false;
+      }
+      if (!video3.muted) {
+        icon.style.opacity = "0.7";
+        video3.muted = true;
+        icon2.style.opacity = "0"
+      }
+      else {
+        icon.style.opacity = "0";
+        icon2.style.opacity = "0.7"
         video3.muted = false;
       }
     }
