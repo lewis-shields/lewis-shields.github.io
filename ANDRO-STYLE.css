@@ -895,6 +895,13 @@ input{
     .end{
         margin-top: 90px;
     }
+
+    #div{
+        display:none;
+    }
+    #div2{
+        display:none;
+    }
 }
 @media only screen and (max-width: 1024px) and (orientation:portrait){
 
@@ -948,6 +955,12 @@ input{
     }
     #mobile-video{
         display:block;
+    }
+    #div{
+        display:none;
+    }
+    #div2{
+        display:none;
     }
 }
 @media only screen and (max-width: 800px) and (min-height:400px) {
