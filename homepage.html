@@ -384,6 +384,9 @@
         //It is a portrait device
         source.setAttribute("src", '/smallest-wide.mov')
         video.append(source);
+        video.muted=true;
+        video.setAttribute("autoplay", "autoplay")
+        myFunction2()
       
         }
         else 
@@ -392,7 +395,10 @@
         source.setAttribute("src", '/smallest-wide.mov')
         video.append(source);
         video.muted=true;
+        video.setAttribute("autoplay", "autoplay")
+        myFunction2()
         }
+  
 
   
     function mute() {
