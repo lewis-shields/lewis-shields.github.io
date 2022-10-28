@@ -72,7 +72,7 @@
       <source src="/ANDRO compressed_1.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
-    <video playsinline autoplay loop id="smaller-video" poster="/homepage poster.png">
+    <video playsinline autoplay loop id="smaller-video">
       <type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
@@ -357,6 +357,9 @@
     function myFunction() {
       document.getElementById("smaller-video").poster = "/homepage-mobile-poster.png";
     }
+    function myFunction2() {
+      document.getElementById("smaller-video").poster = "/homepage poster.png";
+    }
 
     let source = document.createElement("source")
     source.setAttribute("type", "video/mp4")
@@ -366,6 +369,7 @@
         source.setAttribute("src", '/ANDRO compressed_1.mp4')
         video.append(source);
         video.setAttribute("controls","controls")
+        video.setAttribute(autoplay)
         myFunction()
 
     } else 
@@ -374,15 +378,15 @@
         source.setAttribute("src", '/ANDRO compressed_1.mp4')
         video.append(source);
         video.setAttribute("controls","controls")
+        video.setAttribute(autoplay)
         myFunction()
     }
     else 
         if (windowWidth < 1400 && windowHeight <788)  {
         //It is a portrait device
-        source.setAttribute("src", '/ANDRO compressed_1.mp4')
+        source.setAttribute("src", '/smallest-wide.mov')
         video.append(source);
-        video.setAttribute("controls","controls")
-        myFunction()
+      
         }
         else 
         if (windowWidth >1400)  {
@@ -391,6 +395,7 @@
         video.append(source);
         video.muted=true;
         }
+
   
     function mute() {
       var video2 = document.getElementById("smaller-video");
