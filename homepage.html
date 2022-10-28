@@ -58,6 +58,7 @@
         <li id="live-landscape"><a href="#live-dates" class="menu-item">LIVE</a></li>
         <li><a href="#music" class="menu-item">MUSIC</a></li>
         <li><a href="#video" class="menu-item">VIDEO</a></li>
+        <li><a href="/merch" class="menu-item">MERCH</a></li>
         <li><a href="/gallery" class="menu-item">GALLERY</a></li>
       </ul>
     </nav>
@@ -71,8 +72,8 @@
       <source src="/ANDRO compressed_1.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
-    <video playsinline autoplay muted loop id="smaller-video" poster="/homepage poster.png">
-      <source src="smallest-wide.MOV" type="video/mp4">
+    <video playsinline autoplay loop id="smaller-video" poster="/homepage poster.png">
+      <type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
 
@@ -163,6 +164,7 @@
       <a href="#live-dates" class="menu-item-og">LIVE</a>
       <a href="#music" class="menu-item-og">MUSIC</a>
       <a href="#video" class="menu-item-og">VIDEO</a>
+      <a href="/merch" class="menu-item-og">MERCH</a>
       <a href="/gallery" class="menu-item-og">GALLERY</a>
     </div>
   </div>
@@ -345,36 +347,51 @@
     }
   </script>
   <script>
-    var video = document.getElementById("#banner-video");
+    
+    console.log("hello")
+    var video = document.getElementById("smaller-video");
     let windowWidth = window.visualViewport.width
     let windowHeight = window.visualViewport.height
     console.log(windowWidth)
 
+    function myFunction() {
+      document.getElementById("smaller-video").poster = "/homepage-mobile-poster.png";
+    }
+
     let source = document.createElement("source")
     source.setAttribute("type", "video/mp4")
-
+    
     if (windowWidth < 518 && windowHeight > 375) {
-      //It is a small screen
-      source.setAttribute("src", '/smallest-wide.MOV')
-      video.append(source);
-    } else
-      if (windowWidth > 518 && windowWidth < 1400 && windowHeight > 788) {
-        //It is an iPad
-        source.setAttribute("src", '/home-page-vid-mobile.mp4')
+        //It is a small screen
+        source.setAttribute("src", '/ANDRO compressed_1.mp4')
         video.append(source);
-      }
-      else
-        if (windowWidth < 1400 && windowHeight < 788) {
-          //It is a portrait device
-          source.setAttribute("src", '/home-page-vid-mobile.mp4')
-          video.append(source);
+        video.setAttribute("controls","controls")
+        myFunction()
+
+    } else 
+        if (windowWidth > 518 && windowWidth <1400 && windowHeight > 788)  {
+        //It is an iPad
+        source.setAttribute("src", '/ANDRO compressed_1.mp4')
+        video.append(source);
+        video.setAttribute("controls","controls")
+        myFunction()
+    }
+    else 
+        if (windowWidth < 1400 && windowHeight <788)  {
+        //It is a portrait device
+        source.setAttribute("src", '/ANDRO compressed_1.mp4')
+        video.append(source);
+        video.setAttribute("controls","controls")
+        myFunction()
         }
-        else
-          if (windowWidth > 1400) {
-            //It is a big screen or desktop
-            source.setAttribute("src", '/home-vid.MOV')
-            video.append(source);
-          }
+        else 
+        if (windowWidth >1400)  {
+        //It is a big screen or desktop
+        source.setAttribute("src", '/smallest-wide.mov')
+        video.append(source);
+        video.muted=true;
+        }
+  
     function mute() {
       var video2 = document.getElementById("smaller-video");
       var video3 = document.getElementById("mobile-video");
