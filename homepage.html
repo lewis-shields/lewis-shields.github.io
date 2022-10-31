@@ -68,11 +68,7 @@
     <img class="andro-logo" src="/ANDRO_WHITE.png" alt="Andro logo">
   </a>
   <div class="landing-video" id="home">
-    <video playsinline muted loop controls="controls" preload="none" onclick="this.play()" id="mobile-video" poster="/homepage-mobile-poster.png">
-      <source src="/ANDRO compressed_1.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-    </video>
-    <video playsinline loop id="smaller-video">
+    <video playsinline loop autoplay id="smaller-video">
       <type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
@@ -369,6 +365,7 @@
         source.setAttribute("src", '/ANDRO compressed_1.mp4')
         video.append(source);
         video.setAttribute("controls","controls")
+        video.removeAttribute("autoplay","autoplay")
         myFunction()
 
     } else 
@@ -377,6 +374,7 @@
         source.setAttribute("src", '/ANDRO compressed_1.mp4')
         video.append(source);
         video.setAttribute("controls","controls")
+        video.removeAttribute("autoplay","autoplay")
         myFunction()
     }
     else 
@@ -385,7 +383,6 @@
         source.setAttribute("src", '/smallest-wide.mov')
         video.append(source);
         video.muted=true;
-        video.setAttribute("autoplay", "autoplay")
         myFunction2()
       
         }
@@ -395,7 +392,6 @@
         source.setAttribute("src", '/smallest-wide.mov')
         video.append(source);
         video.muted=true;
-        video.setAttribute("autoplay", "autoplay")
         myFunction2()
         }
   
