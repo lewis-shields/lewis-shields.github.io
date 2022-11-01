@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="ANDRO STYLE.css">
+  <link rel="stylesheet" href="ANDRO-STYLE.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap" rel="stylesheet">
@@ -178,39 +178,7 @@
     <img src="/andro-black.png" alt="Andro-LOGO" class="logo-landing-page">
   </div>
 
-  <script>
-    console.log("hello")
-    var video = document.getElementById("video");
-    let windowWidth = window.visualViewport.width
-    let windowHeight = window.visualViewport.height
-    console.log(windowWidth)
-
-    let source = document.createElement("source")
-    source.setAttribute("type", "video/mp4")
-    if (windowWidth < 518 && windowHeight > 375) {
-      //It is a small screen
-      source.setAttribute("src", 'ANDRO test.mp4')
-      video.append(source);
-    } else
-      if (windowWidth > 518 && windowWidth < 1400 && windowHeight > 788) {
-        //It is an iPad
-        source.setAttribute("src", 'ANDRO test.mp4')
-        video.append(source);
-      }
-      else
-        if (windowWidth < 1400 && windowHeight < 788) {
-          //It is a portrait device
-          source.setAttribute("src", 'ANDRO test.mp4')
-          video.append(source);
-        }
-        else
-          if (windowWidth > 1400) {
-            //It is a big screen or desktop
-            source.setAttribute("src", 'ANDRO test.p4')
-            video.append(source);
-          }
-
-  </script>
+  
   <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
   <script>
 
