@@ -68,7 +68,7 @@
     <img class="andro-logo" src="/ANDRO_WHITE.png" alt="Andro logo">
   </a>
   <div class="landing-video" id="home">
-    <video playsinline loop autoplay id="smaller-video">
+    <video playsinline mute loop autoplay id="smaller-video">
       <type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
@@ -366,6 +366,7 @@
         video.append(source);
         video.setAttribute("controls","controls")
         video.removeAttribute("autoplay","autoplay")
+        video.muted=false;
         myFunction()
 
     } else 
@@ -375,6 +376,7 @@
         video.append(source);
         video.setAttribute("controls","controls")
         video.removeAttribute("autoplay","autoplay")
+        video.muted=false;
         myFunction()
     }
     else 
