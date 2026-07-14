@@ -18,23 +18,44 @@
             margin: 0;
             padding: 0;
         }
-        .coming-soon-container {
-            width: 100vw;
-            height: 100vh;
-            position: fixed;
-            background-color: black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .coming-soon{
-            font-family:didot;
-            color: white;
-            font-size: 18pt;
-            position: fixed;
-            display: block;
-            margin: 0 auto;
-        }
+   .merch-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+    padding: 150px 50px 50px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.merch-item img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+}
+
+.merch-item h2 {
+    font-family: 'GFS Didot', serif;
+    font-size: 18pt;
+    margin: 20px 0;
+}
+
+.merch-item a {
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 10px 30px;
+    font-family: 'GFS Didot', serif;
+    display: inline-block;
+}
+
+.merch-item a:hover {
+    background-color: white;
+    color: black;
+}
             @media (min-width: 800px) {
               .header-dropdown {
                 display: none;
@@ -72,9 +93,33 @@
           <a href="/gallery" class="menu-item-og">GALLERY</a>
         </div>
       </div>
-        <div class="coming-soon-container">
-            <div class="coming-soon">COMING SOON</div>
-        </div>
+        <section class="merch-container">
+
+    <div class="merch-item">
+        <img src="/images/HOODIE-NS401.png" alt="Andro Hoodie">
+        <h2>ANDRO HOODIE</h2>
+        <a href="YOUR-WINAMP-HOODIE-LINK" target="_blank">BUY NOW</a>
+    </div>
+
+    <div class="merch-item">
+        <img src="/images/TANK-TOP-S264.png" alt="Andro Tank Top">
+        <h2>ANDRO TANK TOP</h2>
+        <a href="YOUR-WINAMP-TANK-TOP-LINK" target="_blank">BUY NOW</a>
+    </div>
+
+    <div class="merch-item">
+        <img src="/images/T-SHIRT-NS305.png" alt="Andro T Shirt">
+        <h2>ANDRO T-SHIRT</h2>
+        <a href="YOUR-WINAMP-T-SHIRT-LINK" target="_blank">BUY NOW</a>
+    </div>
+
+    <div class="merch-item">
+        <img src="/images/TOTE-BAG-WM801.png" alt="Andro Tote Bag">
+        <h2>ANDRO TOTE BAG</h2>
+        <a href="YOUR-WINAMP-TOTE-BAG-LINK" target="_blank">BUY NOW</a>
+    </div>
+
+</section>
         <script src="/app.js"></script>
     </body>
 </html>
