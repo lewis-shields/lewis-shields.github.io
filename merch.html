@@ -93,54 +93,228 @@
           <a href="/gallery" class="menu-item-og">GALLERY</a>
         </div>
       </div>
-        <section class="merch-container">
-
-    <div class="merch-item">
-        <img src="HOODIE-NS401.png" alt="Andro Hoodie">
-        <h2>ANDRO HOODIE</h2>
-        <a href="YOUR-WINAMP-HOODIE-LINK" target="_blank">BUY NOW</a>
-    </div>
-
-    <div class="merch-item">
-        <img src="HOODIE-NS401.2.png" alt="Andro Hoodie Version 2">
-        <h2>ANDRO HOODIE II</h2>
-        <a href="YOUR-WINAMP-HOODIE-2-LINK" target="_blank">BUY NOW</a>
-    </div>
-
-
-    <div class="merch-item">
-        <img src="TANK-TOP-S264.png" alt="Andro Tank Top">
-        <h2>ANDRO TANK TOP</h2>
-        <a href="YOUR-WINAMP-TANK-TOP-LINK" target="_blank">BUY NOW</a>
-    </div>
-
-    <div class="merch-item">
-        <img src="TANK-TOP-S264.2.png" alt="Andro Tank Top Version 2">
-        <h2>ANDRO TANK TOP II</h2>
-        <a href="YOUR-WINAMP-TANK-TOP-2-LINK" target="_blank">BUY NOW</a>
-    </div>
-
-
-    <div class="merch-item">
-        <img src="TSHIRT-NS305.png" alt="Andro T Shirt">
-        <h2>ANDRO T-SHIRT</h2>
-        <a href="YOUR-WINAMP-T-SHIRT-LINK" target="_blank">BUY NOW</a>
-    </div>
-
-    <div class="merch-item">
-        <img src="TSHIRT-NS305.2.png" alt="Andro T Shirt Version 2">
-        <h2>ANDRO T-SHIRT II</h2>
-        <a href="YOUR-WINAMP-T-SHIRT-2-LINK" target="_blank">BUY NOW</a>
-    </div>
-
-
-    <div class="merch-item">
-        <img src="TOTE-BAG-WM801.png" alt="Andro Tote Bag">
-        <h2>ANDRO TOTE BAG</h2>
-        <a href="YOUR-WINAMP-TOTE-BAG-LINK" target="_blank">BUY NOW</a>
-    </div>
-
-</section>
+        <div id='collection-component-1784099793739'></div>
+<script type="text/javascript">
+/*<![CDATA[*/
+(function () {
+  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+  if (window.ShopifyBuy) {
+    if (window.ShopifyBuy.UI) {
+      ShopifyBuyInit();
+    } else {
+      loadScript();
+    }
+  } else {
+    loadScript();
+  }
+  function loadScript() {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = scriptURL;
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+    script.onload = ShopifyBuyInit;
+  }
+  function ShopifyBuyInit() {
+    var client = ShopifyBuy.buildClient({
+      domain: 'vk1vha-zj.myshopify.com',
+      storefrontAccessToken: 'e581359322382ac330cfc1f7388992d8',
+    });
+    ShopifyBuy.UI.onReady(client).then(function (ui) {
+      ui.createComponent('collection', {
+        id: '666377945416',
+        node: document.getElementById('collection-component-1784099793739'),
+        moneyFormat: '%E2%82%AC%7B%7Bamount_with_comma_separator%7D%7D',
+        options: {
+  "product": {
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "calc(33.33333% - 30px)",
+          "margin-left": "30px",
+          "margin-bottom": "50px",
+          "width": "calc(33.33333% - 30px)"
+        },
+        "img": {
+          "height": "calc(100% - 15px)",
+          "position": "absolute",
+          "left": "0",
+          "right": "0",
+          "top": "0"
+        },
+        "imgWrapper": {
+          "padding-top": "calc(75% + 15px)",
+          "position": "relative",
+          "height": "0"
+        }
+      },
+      "title": {
+        "color": "#ffffff"
+      },
+      "button": {
+        "font-family": "Arial, sans-serif",
+        "font-size": "14px",
+        "padding-top": "15px",
+        "padding-bottom": "15px",
+        ":hover": {
+          "background-color": "#0a0a0a"
+        },
+        "background-color": "#060606",
+        ":focus": {
+          "background-color": "#0a0a0a"
+        },
+        "border-radius": "18px",
+        "padding-left": "45px",
+        "padding-right": "45px"
+      },
+      "quantityInput": {
+        "font-size": "14px",
+        "padding-top": "15px",
+        "padding-bottom": "15px"
+      },
+      "price": {
+        "font-size": "16px",
+        "color": "#ffffff"
+      },
+      "compareAt": {
+        "font-size": "13.6px",
+        "color": "#ffffff"
+      },
+      "unitPrice": {
+        "font-size": "13.6px",
+        "color": "#ffffff"
+      }
+    },
+    "buttonDestination": "modal",
+    "contents": {
+      "options": false
+    },
+    "text": {
+      "button": "View product"
+    }
+  },
+  "productSet": {
+    "styles": {
+      "products": {
+        "@media (min-width: 601px)": {
+          "margin-left": "-30px"
+        }
+      }
+    }
+  },
+  "modalProduct": {
+    "contents": {
+      "img": false,
+      "imgWithCarousel": true,
+      "button": false,
+      "buttonWithQuantity": true
+    },
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "100%",
+          "margin-left": "0px",
+          "margin-bottom": "0px"
+        }
+      },
+      "button": {
+        "font-family": "Arial, sans-serif",
+        "font-size": "14px",
+        "padding-top": "15px",
+        "padding-bottom": "15px",
+        ":hover": {
+          "background-color": "#0a0a0a"
+        },
+        "background-color": "#060606",
+        ":focus": {
+          "background-color": "#0a0a0a"
+        },
+        "border-radius": "18px",
+        "padding-left": "45px",
+        "padding-right": "45px"
+      },
+      "quantityInput": {
+        "font-size": "14px",
+        "padding-top": "15px",
+        "padding-bottom": "15px"
+      },
+      "title": {
+        "font-family": "Helvetica Neue, sans-serif",
+        "font-weight": "bold",
+        "font-size": "34px",
+        "color": "#575656"
+      },
+      "price": {
+        "font-family": "Helvetica Neue, sans-serif",
+        "font-weight": "normal",
+        "font-size": "22px",
+        "color": "#575656"
+      },
+      "compareAt": {
+        "font-family": "Helvetica Neue, sans-serif",
+        "font-weight": "normal",
+        "font-size": "18.7px",
+        "color": "#575656"
+      },
+      "unitPrice": {
+        "font-family": "Helvetica Neue, sans-serif",
+        "font-weight": "normal",
+        "font-size": "18.7px",
+        "color": "#575656"
+      },
+      "description": {
+        "font-size": "17px",
+        "color": "#575656"
+      }
+    }
+  },
+  "option": {},
+  "cart": {
+    "styles": {
+      "button": {
+        "font-family": "Arial, sans-serif",
+        "font-size": "14px",
+        "padding-top": "15px",
+        "padding-bottom": "15px",
+        ":hover": {
+          "background-color": "#0a0a0a"
+        },
+        "background-color": "#060606",
+        ":focus": {
+          "background-color": "#0a0a0a"
+        },
+        "border-radius": "18px"
+      }
+    },
+    "text": {
+      "total": "Total",
+      "notice": "Shipping costs and discount codes will be added at checkout.",
+      "button": "Checkout"
+    }
+  },
+  "toggle": {
+    "styles": {
+      "toggle": {
+        "font-family": "Arial, sans-serif",
+        "background-color": "#060606",
+        ":hover": {
+          "background-color": "#0a0a0a"
+        },
+        ":focus": {
+          "background-color": "#0a0a0a"
+        }
+      },
+      "count": {
+        "font-size": "14px"
+      }
+    }
+  }
+},
+      });
+    });
+  }
+})();
+/*]]>*/
+</script>
         <script src="/app.js"></script>
     </body>
 </html>
